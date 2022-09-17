@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculatorKata", "StringCalculatorKata\StringCalculatorKata.csproj", "{F11FDBD8-958B-4BF6-84CF-B75577DFCFC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator.Tests", "StringCalculator.Tests\StringCalculator.Tests.csproj", "{B05D27DF-658E-4E8F-A8A0-5730EC0302F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F11FDBD8-958B-4BF6-84CF-B75577DFCFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F11FDBD8-958B-4BF6-84CF-B75577DFCFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F11FDBD8-958B-4BF6-84CF-B75577DFCFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F11FDBD8-958B-4BF6-84CF-B75577DFCFC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B05D27DF-658E-4E8F-A8A0-5730EC0302F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B05D27DF-658E-4E8F-A8A0-5730EC0302F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B05D27DF-658E-4E8F-A8A0-5730EC0302F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B05D27DF-658E-4E8F-A8A0-5730EC0302F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
