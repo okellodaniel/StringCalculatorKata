@@ -4,19 +4,17 @@ public class Calculator
 {
     public int Add(string input)
     {
-        var stringInput = input.Split(new []{','},StringSplitOptions.RemoveEmptyEntries);
-
-        if (!stringInput.Any())
+        var delimiters = new List<char> { ',', '\n' };
+        if (input.StartsWith("//"))
         {
-            return 0;
+            // Split on New line appearance.
+            var splitdelimiter = input.Split(new[] { '\n' }, 2);
+            var customDelimiter = splitdelimiter[0].Replace("//", string.Empty).Single();
+            delimiters.Add(customDelimiter);
+            input = splitdelimiter[1];
         }
-
-        if (stringInput.Length == 1)
-        {
-          return int.Parse(stringInput[0]);
-        }
-
-        return int.Parse(stringInput[0]) + int.Parse(stringInput[1]);
-
+        var stringInput = input.Split(delimiters.ToArray(), StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse);
+        return stringInput.Sum();
     }
 }
