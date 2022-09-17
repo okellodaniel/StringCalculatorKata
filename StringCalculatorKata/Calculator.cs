@@ -8,13 +8,20 @@ public class Calculator
         if (input.StartsWith("//"))
         {
             // Split on New line appearance.
-            var splitdelimiter = input.Split(new[] { '\n' }, 2);
-            var customDelimiter = splitdelimiter[0].Replace("//", string.Empty).Single();
+            var splitDelimiter = input.Split(new[] { '\n' }, 2);
+            var customDelimiter = splitDelimiter[0].Replace("//", string.Empty).Single();
             delimiters.Add(customDelimiter);
-            input = splitdelimiter[1];
+            input = splitDelimiter[1];
         }
         var stringInput = input.Split(delimiters.ToArray(), StringSplitOptions.RemoveEmptyEntries)
-            .Select(int.Parse);
+            .Select(int.Parse).ToList();
+        
+        var negativeNumbers = stringInput.Where(x => x < 0).ToList();
+        if (negativeNumbers.Any())
+        {
+            throw new Exception($"Negative numbers not allowed: {string.Join(",",negativeNumbers)}");
+        }
+        
         return stringInput.Sum();
     }
 }
